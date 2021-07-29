@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Register</title>
+	<?php
+		include "../db.php";
+	?>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<form class="report" method="post" action="../member/register_check.php">
+	<h1>Register</h1>
+
+	<p style="font-size:25px;">Name</p>
+	<input type='text' name='username' autocomplete='off' style="font-size: 20px;"required >
+
+	<p style="font-size:25px;">Age</p>
+	<input type="text" name="userage" autocomplete="off" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" style="font-size: 20px;" required >
+
+	<p style="font-size:25px;">UserID</p>
+	<input type="text" name="userid" autocomplete="off" style="font-size: 20px;"required >
+
+	<p style="font-size:25px;">Password</p>
+	<input type="text" name="userpassword" autocomplete="off" style="font-size: 20px;"required >
+
+	<button type="submit" name="compeletebtn">Join</button>
+</form>
+
+</body>
+</html>

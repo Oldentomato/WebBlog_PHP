@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<?php include "../db.php"; header('Content-Tye: text/html; charset=utf-8'); 
+    $bno = $_GET['idx'];
+?>
+<html>
+    <head>
+        <title>deletecheck</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            if(confirm("정말 삭제하시겠습니까?")){
+                window.location.replace('../member/delete_check.php?idx=<?php echo $bno;?>');
+            }else{
+                window.location.replace('javascript:history.back()');
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,147 @@
+body{
+	font-family: sans-serif;
+	background: url(bg.jpg) no-repeat center center fixed;/*1920*1080이 가장 적합*/
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+	background-size: cover;
+}
+body::before{
+	content:"";
+	position: absolute; z-index:1;
+	top:0;right:0;bottom:0;left:0;
+	background-color: rgba(0,0,0,.7);
+}
+.box{ /*로그인박스 전체 컨트롤*/
+	position: relative; z-index:2;/*z-index가 유니티의 depth와 비슷한 역할이다*/
+	width: 300px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: #191919;
+	text-align: center;/*박스 안 로그인단어나 입력창 등을 중앙으로 설정*/
+}
+.box h1{
+	color: white;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.box input[type = "text"],.box input[type = "password"] {
+
+	background: none;
+	display: block; /*block으로 되어있으면 크기조절이 가능하다 inline은 안됨*/
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	color: white;
+	border-radius: 24px; /*텍스트창 네모부분의 끝부분을 둥글게해주는부분*/
+	transition: 0.25s;
+}
+.box a[name = "forgotbtn"]{
+
+	background: none;
+	display: block;
+	margin: auto;
+	text-align: center;
+	border: 0;/*  0으로 해야 테두리가 사라짐*/
+	width: 200px;
+	color: white;
+	cursor: pointer;/*위에 포인터를 올리면 손가락으로 바뀐다*/
+}
+.box input[type= "text"]:focus,.box input[type = "password"]:focus{ /*focus는 클릭(trigger)시 아래 함수내용들을 구현시키는 역할*/
+	width:240px;
+	border-color: #2ecc71;
+}
+.box button[name = "loginbtn"]{
+	background: none;
+	display: inline;
+	margin: 20px auto; /*20px는 상하 30px는 좌우 여백을 의미*/
+	text-align: center;
+	border: 2px solid #2ecc71;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+.box button[name = "registerbtn"]{
+	background: none;
+	display: inline;/*block은 상하로 정렬 inline은 좌우로 정렬*/
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #3498db; /*테두리*/
+	padding: 14px 40px; /*margin과 반대로 채우는 의미임*/
+	outline: none;/*border보다 바깥의 라인을 가리킴*/
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;/*마우스올릴때 색상을 서서히바뀌는 시간 0.25초*/
+	cursor: pointer;
+}
+.box button[name = "loginbtn"]:hover{/*hover는 focus와 비슷하지만 커서만 올려놓으면 발동한다*/
+	background: #2ecc71;
+}
+.box button[name = "registerbtn"]:hover{/*hover는 focus와 비슷하지만 커서만 올려놓으면 발동한다*/
+	background: #3498db;
+}
+
+.report{
+	position: relative; z-index:2;
+	display: block;
+	width: 400px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: #191919;
+	text-align: center;
+}
+.report h1{
+	color: white;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.report p{
+	background: none;
+	display: block;
+	text-align:left;
+	color: white;
+}
+.report input[type= "text"]{
+	background: none;
+	display: block;
+	text-align: center;
+	width: 350px;
+	margin: 15px 20px;
+	border: 2px solid #2ecc71;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+}
+.report button[name="compeletebtn"]{
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #3498db; /*�׵θ�*/
+	padding: 14px 40px; /*margin�� �ݴ��� ä���� �ǹ���*/
+	outline: none;/*border���� �ٱ��� ������ ����Ŵ*/
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;/*���콺�ø��� ������ �������ٲ��� �ð� 0.25��*/
+	cursor: pointer;
+}
+.report button[name = "compeletebtn"]:hover{/*hover�� focus�� ���������� Ŀ���� �÷������� �ߵ��Ѵ�*/
+	background: #3498db;
+	transition: 0.25s;
+}
+.report input[type = "text"]:focus{
+	border: 2px solid #3498db;
+	transition: 0.25s;
+}
